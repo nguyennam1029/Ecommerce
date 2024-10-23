@@ -1,5 +1,7 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
+// eslint-disable-next-line react/prop-types
 export default function MainLayout({children}) {
   return (
     <>
@@ -10,7 +12,8 @@ export default function MainLayout({children}) {
         <div className="flex gap-10">
           <div className="font-bold text-3xl">Logo</div>
           <div className="flex items-center gap-5 font-medium">
-            <a href="Home">Home</a>
+            <NavLink to='/' >Home</NavLink>
+            <NavLink to='/shop' >Shop</NavLink>
             <a href="About">About</a>
             <a href="Shop">Shop</a>
           </div>
@@ -39,6 +42,11 @@ export default function MainLayout({children}) {
         {children}
       </div>
    
+   <div className='mt-28'>
+    <div className='max-w-[1202px]'>
+      Footer 
+    </div>
+   </div>
     </>
     
 
