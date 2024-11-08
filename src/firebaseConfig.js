@@ -1,6 +1,6 @@
 // src/firebase.js
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCKOBxCuAlGPT-24mlpo35NOPsrcAH-S-s",
@@ -18,4 +18,4 @@ const app = initializeApp(firebaseConfig);
 // Lấy Firestore instance
 const db = getFirestore(app);
 
-export { db };
+export { db, collection, addDoc };

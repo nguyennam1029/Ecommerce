@@ -7,7 +7,6 @@ import { db } from '@/firebaseConfig';
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   console.log("🚀 ~ ProductList ~ products:", products)
-
   useEffect(() => {
     // Hàm lấy dữ liệu từ Firestore
     const fetchProducts = async () => {
